@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300&display=swap" rel="stylesheet">
+  <title>crypto News</title>
+</head>
+
+<body>
+  <header id="main">
+    <a href="/">Crypto News</a>
+  </header>
+  <main>
+    <div class="welcom">
+      <h1>Keep up to date with crypto news</h1>
+      <a class="action-bt" href="#news"> see news —<span>></span> </a>
+    </div>
+  </main>
+  <section id="news">
+    <% if(locals.data){ %>
+        <% data.forEach((elem)=>{ %>
+            <div class="card">
+            <div class="thumbnail">
+                <img src=<%= elem.thumbnail %> alt="">
+            </div>
+            <div class="details">
+                <h3> <%= elem.title %> </h5>
+                <p> <%= elem.description %> </p>
+                <p class="date"> <%= elem.date %> </p>
+            </div>
+            <a class="action-bt" href=<%= elem.url%>> read more —<span>></span> </a>
+            </div>
+        <% }) %>
+
+    <%} %>
+
+  </section>
+  <footer>
+    <p>made with ❤ by Abdelrahman Mohamed </p>
+    <a class="action-bt" href='#main'> go up —<span>></span> </a>
+  </footer>
+</body>
+
+</html>

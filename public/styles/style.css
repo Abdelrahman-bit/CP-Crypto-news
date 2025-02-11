@@ -1,0 +1,168 @@
+* {
+	padding: 0px;
+	margin: 0px;
+	box-sizing: border-box;
+	font-family: "Fira Code", serif;
+	scroll-behavior: smooth;
+}
+/* header styling */
+header {
+	width: 100%;
+	height: 3rem;
+	padding: 10px;
+}
+header a {
+	color: black;
+	text-decoration: none;
+	font-weight: bold;
+	margin-left: 20px;
+}
+/* the welcome page */
+main {
+	width: 100%;
+	height: 94.5vh;
+	background-image: url("https://d1b3667xvzs6rz.cloudfront.net/2023/04/ARTICLE-CRYPTO-2-1.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.welcom {
+	width: 50%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+.welcom h1 {
+	color: rgb(231, 231, 231);
+	font-size: 3rem;
+	font-weight: bolder;
+	margin-bottom: 1em;
+	margin-left: 1em;
+}
+.action-bt {
+	text-decoration: none;
+	color: white;
+	background-color: rgb(1, 202, 115);
+	padding: 1em;
+	border-radius: 5px;
+	font-size: large;
+}
+.action-bt:hover span {
+	transition: all 0.5s ease-in-out;
+	display: inline-block;
+	transform: translateX(6px);
+}
+
+/* styleing the body of the page cards */
+#news {
+	width: 100%;
+	padding-top: 4em;
+	padding-bottom: 4em;
+	padding-left: 4em;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+	gap: 3em;
+	align-content: center;
+	justify-content: space-around;
+	align-items: center;
+}
+.card {
+	display: flex;
+	flex-direction: column;
+	width: 400px;
+	height: 450px;
+	border: 2px solid black;
+	border-radius: 10px;
+	justify-content: space-between;
+	align-items: center;
+	padding-bottom: 10px;
+}
+.card:hover {
+	box-shadow: 5px 10px 8px 10px #00bb5495;
+	transform: scale(1.03);
+	transition: all 0.5s ease-in-out;
+}
+.thumbnail {
+	width: 100%;
+	height: 60%;
+	overflow: hidden;
+}
+.thumbnail img {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+.details {
+	padding: 0.5em 0.4em;
+}
+.details p {
+	display: block; /* or inline-block */
+	text-overflow: ellipsis;
+	word-wrap: break-word;
+	overflow: hidden;
+	max-height: 3em;
+	line-height: 1.4em;
+	font-size: smaller;
+}
+.details h3 {
+	display: block; /* or inline-block */
+	text-overflow: ellipsis;
+	word-wrap: break-word;
+	overflow: hidden;
+	max-height: 2.5em;
+	line-height: 1.2em;
+}
+.card .date {
+	font-size: 0.7rem;
+	color: rgb(125, 125, 125);
+	margin-top: 0.7em;
+}
+.card a {
+	padding: 0.7em;
+	font-size: 0.9rem;
+}
+
+/* footer styles */
+footer {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	height: 30vh;
+	background-color: rgb(0, 0, 32);
+	color: wheat;
+	padding: 0 5em;
+}
+
+/* mobile responssivnes */
+@media only screen and (max-width: 768px) {
+	#news {
+		padding-left: 2.5em;
+	}
+	.action-bt {
+		font-size: small;
+		padding: 1em;
+	}
+	footer {
+		padding: 0 2em;
+	}
+	footer p {
+		font-size: small;
+	}
+	.welcom {
+		width: 100%;
+		height: 100%;
+	}
+	.welcom h1 {
+		color: rgb(231, 231, 231);
+		font-size: 2rem;
+		font-weight: bolder;
+		margin-bottom: 1em;
+		margin-left: 1em;
+	}
+    main {
+	width: 100%;
+	height: 80vh;
+}
+}
